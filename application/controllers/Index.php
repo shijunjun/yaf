@@ -1,12 +1,18 @@
 <?php
 
-class IndexController extends Yaf\Controller_Abstract{
+class IndexController extends BaseController{
   
   public function init(){
-    //echo "init ...";
+    parent::init();
   }
 
-  public function indexAction(){
+  public function indexAction() {
+    $accountLogic = new logics\AccountLogicModel(); 
+    $accountLogic->commonLogic();
+    //$this->display( "index/index", [] );
+  }
+
+  public function index1Action(){
     //echo CSRF::getToken();
     exit;
     //use Gregwar\Captcha\CaptchaBuilder;
