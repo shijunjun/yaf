@@ -9,7 +9,7 @@ class IndexController extends BaseController{
   public function indexAction() {
     $accountLogic = new logics\AccountLogicModel(); 
     $accountLogic->commonLogic();
-    //$this->display( "index/index", [] );
+    $this->display( "index/index", [] );
   }
 
   public function index1Action(){
